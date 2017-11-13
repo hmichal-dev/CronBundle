@@ -6,21 +6,19 @@ php:
 
 env:
   - SYMFONY_VERSION=2.8.*
+  - SYMFONY_VERSION=3.3.*
   - SYMFONY_VERSION=3.0.*
   - SYMFONY_VERSION=3.1.*
   - SYMFONY_VERSION=3.2.*
-  - SYMFONY_VERSION=3.3.*
 
-before_script:
+before_install:
+  - travis_retry composer self-update
+
+install:
   - composer require symfony/framework-bundle:${SYMFONY_VERSION} --no-update
-  - composer update --dev
+  - composer require symfony/console :${SYMFONY_VERSION} --no-update
+  - composer require symfony/process:${SYMFONY_VERSION} --no-update
+  - composer require symfony/options-resolver:${SYMFONY_VERSION} --no-update
+  - composer update
 
 script: phpunit --coverage-text
-
-notifications:
-  email:
-    - seb.kueck@gmail.com
-
-matrix:
-  allow_failures:
-    - env: SYMFONY_VERSION=dev-master
