@@ -15,10 +15,10 @@ before_install:
   - travis_retry composer self-update
 
 install:
-  - composer require symfony/framework-bundle:${SYMFONY_VERSION} --no-update
-  - composer require symfony/console :${SYMFONY_VERSION} --no-update
-  - composer require symfony/process:${SYMFONY_VERSION} --no-update
-  - composer require symfony/options-resolver:${SYMFONY_VERSION} --no-update
+  - composer require symfony/framework-bundle: ${SYMFONY_VERSION} --no-update
+  - composer require symfony/console: ${SYMFONY_VERSION} --no-update
+  - composer require symfony/process: ${SYMFONY_VERSION} --no-update
+  - composer require symfony/options-resolver: ${SYMFONY_VERSION} --no-update
   - composer update
 
 script: phpunit --coverage-text
