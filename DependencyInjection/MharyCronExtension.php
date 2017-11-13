@@ -1,6 +1,6 @@
 <?php
 
-namespace Sbk\Bundle\CronBundle\DependencyInjection;
+namespace Mhary\Bundle\CronBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SbkCronExtension extends Extension
+class MharyCronExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -22,7 +22,7 @@ class SbkCronExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('sbk_cron.tasks', $config['tasks']);
+        $container->setParameter('mhary_cron.tasks', $config['tasks']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

@@ -1,13 +1,13 @@
 <?php
 
-namespace Sbk\Bundle\CronBundle\DependencyInjection;
+namespace Mhary\Bundle\CronBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
  * Class Configuration
- * @package Sbk\Bundle\CronBundle\DependencyInjection
+ * @package Mhary\Bundle\CronBundle\DependencyInjection
  */
 class Configuration implements ConfigurationInterface
 {
@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('sbk_cron');
+        $rootNode = $treeBuilder->root('mhary_cron');
 
         $rootNode
             ->children()

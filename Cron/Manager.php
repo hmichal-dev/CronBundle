@@ -5,14 +5,14 @@
  * @copyright (C) superReal GmbH | Agentur fuer Neue Kommunikation
  * @author Sebastian Kueck <s.kueck AT superreal.de>
  */
-namespace Sbk\Bundle\CronBundle\Cron;
+namespace Mhary\Bundle\CronBundle\Cron;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Process\Process;
 
 /**
  * Class Manager
- * @package Sbk\Bundle\CronBundle\Cron
+ * @package Mhary\Bundle\CronBundle\Cron
  */
 class Manager
 {

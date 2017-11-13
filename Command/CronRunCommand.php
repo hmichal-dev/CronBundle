@@ -5,7 +5,7 @@
  * @copyright (C) superReal GmbH | Agentur fuer Neue Kommunikation
  * @author Sebastian Kueck <s.kueck AT superreal.de>
  */
-namespace Sbk\Bundle\CronBundle\Command;
+namespace Mhary\Bundle\CronBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -13,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class CronRunCommand
- * @package Sbk\Bundle\CronBundle\Command
+ * @package Mhary\Bundle\CronBundle\Command
  */
 class CronRunCommand extends ContainerAwareCommand
 {
@@ -34,7 +34,7 @@ class CronRunCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $cronManager = $this->getContainer()->get('sbk_cron.manager');
+        $cronManager = $this->getContainer()->get('mhary_cron.manager');
         $cronManager->forkTasks();
     }
 

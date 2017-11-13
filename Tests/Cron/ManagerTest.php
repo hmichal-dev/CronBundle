@@ -5,10 +5,10 @@
  * @copyright (C) superReal GmbH | Agentur fuer Neue Kommunikation
  * @author Sebastian Kueck <s.kueck AT superreal.de>
  */
-namespace Sbk\Bundle\CronBundle\Tests\Cron;
+namespace Mhary\Bundle\CronBundle\Tests\Cron;
 
 use Monolog\Logger;
-use Sbk\Bundle\CronBundle\Cron\Manager;
+use Mhary\Bundle\CronBundle\Cron\Manager;
 
 class ManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -25,7 +25,7 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
     public function testInstance()
     {
         $manager = new Manager($this->loggerStub, null, array());
-        $this->assertInstanceOf('Sbk\Bundle\CronBundle\Cron\Manager', $manager);
+        $this->assertInstanceOf('Mhary\Bundle\CronBundle\Cron\Manager', $manager);
     }
 
     public function testTasks()
@@ -47,7 +47,7 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertCount(1, $tasks);
 
         foreach ($tasks as $task) {
-            $this->assertInstanceOf('Sbk\Bundle\CronBundle\Cron\Task', $task);
+            $this->assertInstanceOf('Mhary\Bundle\CronBundle\Cron\Task', $task);
         }
     }
 

@@ -6,9 +6,9 @@
  * @author Sebastian Kueck <s.kueck AT superreal.de>
  */
 
-namespace Sbk\Bundle\CronBundle\Tests\Cron;
+namespace Mhary\Bundle\CronBundle\Tests\Cron;
 
-use Sbk\Bundle\CronBundle\Cron\Task;
+use Mhary\Bundle\CronBundle\Cron\Task;
 
 class TaskTest extends \PHPUnit_Framework_TestCase
 {

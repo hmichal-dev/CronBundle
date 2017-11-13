@@ -1,35 +1,24 @@
-SbkCronBundle
+MharyCronBundle
 =============
 
-Symfony2 Bundle for setting up cron jobs via configuration.
+Symfony2 / Symfony 3 Bundle for setting up cron jobs via configuration.
 
-[![Build Status](https://travis-ci.org/skck/SbkCronBundle.png?branch=master)](https://travis-ci.org/skck/SbkCronBundle)
+Fork of unsupported skck/SbkCronBundle
+
+PHP 7.0+ required
 
 # Installation
 
 ## Prerequisites
 
-This bundle requires Symfony 2.1+, as it must be installed with composer.
+This bundle requires Symfony 2.1+
 
-## Download SbkCronBundle with composer
-
-Add the following to your project `composer.json`:
-
-```js
-{
-    "require": {
-        "sbk/cron-bundle": "dev-master"
-    }
-}
-```
 
 Now install it with this command:
 
 ```bash
-$ php composer.phar update sbk/cron-bundle
+composer require mhary/cron-bundle
 ```
-
-The bundle should be downloaded to the `vendor` directory.
 
 ## Enable the bundle
 
@@ -43,7 +32,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Sbk\Bundle\CronBundle\SbkCronBundle(),
+        new Mhary\Bundle\CronBundle\MharyCronBundle(),
     );
 }
 ``` 
@@ -55,7 +44,7 @@ The CronBundle depends on certain services, so you need to import the service co
 ```
 imports:
     # ...
-    - { resource: @SbkCronBundle/Resources/config/services.yml }
+    - { resource: @MharyCronBundle/Resources/config/services.yml }
 ```
 
 Now you should be able to use the Cron Manager.
@@ -67,7 +56,7 @@ Now you should be able to use the Cron Manager.
 Tasks can be configured in `app/config/config(_prod).yml`.
 
 ```
-sbk_cron:
+mhary_cron:
   tasks:
     clearcache:
       command: "cache:clear --env=prod"
@@ -80,7 +69,7 @@ sbk_cron:
       
 ```
 
-Each entry in `sbk_cron.tasks` represents a task. 
+Each entry in `mhary_cron.tasks` represents a task. 
 
 **`command`**
 
@@ -110,3 +99,7 @@ This will execute the cron manager every minute.
 
 The manager will check which tasks need to be executed and will create background processes for every due task. 
 
+
+## License
+
+The MIT License. For the full text of license, please, see [LICENSE](/LICENSE)
