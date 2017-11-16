@@ -107,6 +107,8 @@ class Manager
             );
             $taskProcess = new Process($task->getCommandToExecute());
             $taskProcess->start();
+			
+            usleep(1000000); // Wait 1s 
         }
     }
 
