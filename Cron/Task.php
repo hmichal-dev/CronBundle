@@ -130,7 +130,7 @@ class Task
     /**
      * @param OptionsResolverInterface $resolver
      */
-    protected function setDefaultOptions(OptionsResolverInterface $resolver)
+    protected function setDefaultOptions($resolver)
     {
         $resolver->setDefaults(
             array(
